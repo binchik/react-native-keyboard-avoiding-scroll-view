@@ -13,7 +13,6 @@
 **/yarn-error.log*
 
 # Compilation artifacts
-/dist/
 /example/.expo/
 
 # ESLint
