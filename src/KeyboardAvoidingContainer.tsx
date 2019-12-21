@@ -9,7 +9,6 @@ import {
   NativeScrollEvent,
   NativeSyntheticEvent,
   Platform,
-  SafeAreaView,
   ScreenRect,
   ScrollView,
   ScrollViewProps,
@@ -58,14 +57,14 @@ export const KeyboardAvoidingContainer = genericMemo(
     stickyFooterProps,
   }: KeyboardAvoidingContainerProps<TScrollViewProps>) => {
     return (
-      <SafeAreaView style={[styles.container, containerStyle]}>
+      <View style={[styles.container, containerStyle]}>
         <ScrollViewComponent ref={scrollViewRef} {...scrollViewProps} />
         {stickyFooter && (
           <View ref={stickyFooterRef} {...stickyFooterProps}>
             {stickyFooter}
           </View>
         )}
-      </SafeAreaView>
+      </View>
     )
   },
 )
